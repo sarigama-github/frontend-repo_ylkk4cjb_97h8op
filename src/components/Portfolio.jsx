@@ -42,7 +42,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-emerald-500/5"
+              className="group relative overflow-hidden rounded-2xl border border-emerald-400/20 bg-white/[0.03] backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img src={p.img} alt="" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -54,6 +54,8 @@ export default function Portfolio() {
                 </div>
                 <div className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.9)]" />
               </div>
+              {/* diagonal glass shine */}
+              <div className="pointer-events-none absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-white/15 to-transparent blur-xl translate-y-0 group-hover:translate-y-24 transition-transform duration-700" />
             </motion.a>
           ))}
         </div>

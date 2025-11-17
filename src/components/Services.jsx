@@ -42,12 +42,14 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/5 to-transparent p-6 hover:border-emerald-400/40"
+              className="group relative overflow-hidden rounded-2xl border border-emerald-400/20 bg-white/[0.03] backdrop-blur-xl p-6 hover:border-emerald-400/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
             >
               <s.icon className="h-6 w-6 text-emerald-300" />
               <h3 className="mt-3 text-white font-medium">{s.title}</h3>
               <p className="mt-2 text-emerald-200/80 text-sm">{s.desc}</p>
-              <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-emerald-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* glass shine */}
+              <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-emerald-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="pointer-events-none absolute left-4 right-4 -top-6 h-10 rounded-2xl bg-white/10 blur-xl" />
             </motion.div>
           ))}
         </div>
